@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg">
+  <symbol id="discord" viewBox="0 0 24 24">
+    <path stroke="none" fill="transparent" d="M0 0h24v24H0z"/>
+    <path fill="#fff" stroke="none" d="m15 3 5 2c2 5 3 10 2 12l-4 4-3-2a22 22 0 0 0 2-1 1 1 0 1 0 0-1H7a1 1 0 0 0 0 1l2 1-2 2c-2 0-4-2-5-4s0-7 2-12l5-2a1 1 0 0 1 1 0v1l1 1a13 13 0 0 1 2 0l1-1a1 1 0 0 1 1-1zm-6 7a2 2 0 0 0-2 2 2 2 0 1 0 2-2zm6 0a2 2 0 0 0-2 2 2 2 0 1 0 2-2z"/>
+  </symbol>
+  <symbol id="friends" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M16 17v2H2v-2s0-4 7-4 7 4 7 4m-3-9a4 4 0 1 0-4 3 4 4 0 0 0 4-3m3 5a5 5 0 0 1 2 4v2h4v-2s0-4-6-4m-1-9a3 3 0 0 0-2 1 5 5 0 0 1 0 5 3 3 0 0 0 2 1 4 4 0 0 0 0-7Z"/>
+  </symbol>
+  <symbol id="headphones" viewBox="0 0 24 24">
+    <path fill="#939aa3" d="M4 12h3a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-7a10 10 0 1 1 20 0v7a2 2 0 0 1-2 2h-3a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h3a8 8 0 1 0-16 0Z" class="messages-footer-icons-svg"/>
+  </symbol>
+  <symbol id="mic" viewBox="0 0 24 24">
+    <path fill="#939aa3" d="m12 14-2-1-1-2V5l1-2 2-1 2 1 1 2v6l-1 2-2 1Zm-1 7v-3q-3 0-4-2t-2-5h2l1 4q1 2 4 1l4-1q2-1 1-4h2q0 3-2 5t-4 2v3h-2Z" class="messages-footer-icons-svg"/>
+  </symbol>
+  <symbol id="plus" viewBox="0 0 24 24">
+    <path fill="none" stroke="none" d="M0 0h24v24H0z"/>
+    <path d="M12 5v14m-7-7h14"/>
+  </symbol>
+  <symbol id="safari" viewBox="0 0 24 24">
+    <path fill="transparent" stroke="none" d="M0 0h24v24H0z"/>
+    <path fill="transparent" d="m8 16 2-6 6-2-2 6-6 2"/>
+    <path fill="transparent" d="M3 12a9 9 0 1 0 18 0 9 9 0 1 0-18 0"/>
+  </symbol>
+  <symbol id="settings" viewBox="0 0 24 24">
+    <path fill="none" stroke="none" d="M0 0h24v24H0z"/>
+    <path fill="none" stroke="#939aa3" stroke-width="2" d="M10 4h4a2 2 0 0 0 2 1c2-1 4 1 3 3a2 2 0 0 0 1 2v4a2 2 0 0 0-1 2c1 2-1 4-3 3a2 2 0 0 0-2 1h-4a2 2 0 0 0-2-1c-2 1-4-1-3-3a2 2 0 0 0-1-2v-4a2 2 0 0 0 1-2C4 6 6 4 8 5c1 1 2 0 2-1z"/>
+    <path fill="none" stroke="#939aa3" stroke-width="2" d="M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0"/>
+  </symbol>
+  <symbol id="inbox" viewBox="0 0 24 24">
+    <path fill="currentColor" d="m5 21-1-1-1-1V5l1-1 1-1h14l1 1 1 1v14l-1 1-1 1H5Zm7-5 2-1 1-1h4V5H5v9h4l1 1 2 1Z"/>
+  </symbol>
+  <symbol id="message" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M20 2H4L2 4v12l2 2h3v4l6-4h7l2-2V4a2 2 0 0 0-2-2zm-3 9h-4v4h-2v-4H7V9h4V5h2v4h4v2z"/>
+  </symbol>
+  <symbol id="question" viewBox="0 0 24 24">
+    <g fill="none">
+      <path d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z"/>
+      <path fill="currentColor" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2Zm0 14a1 1 0 1 0 0 2a1 1 0 0 0 0-2Zm0-9.5a3.625 3.625 0 0 0-3.625 3.625a1 1 0 1 0 2 0a1.625 1.625 0 1 1 2.23 1.51c-.676.27-1.605.962-1.605 2.115V14a1 1 0 1 0 2 0c0-.244.05-.366.261-.47l.087-.04A3.626 3.626 0 0 0 12 6.5Z"/>
+    </g>
+  </symbol>
+  <symbol id="wheel" viewBox="0 0 24 24">
+    <path fill="currentColor" fill-rule="evenodd" d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Zm6-9h-3a3 3 0 0 1-1 1l2 3a6 6 0 0 0 2-4Zm-4 5-1-3a3 3 0 0 1-2 0l-1 3a6 6 0 0 0 2 0h2Zm-6-1 2-3a3 3 0 0 1-1-1H6a6 6 0 0 0 2 4Zm10-6h-3a3 3 0 0 0-1-1l2-3a6 6 0 0 1 2 4Zm-4-5a6 6 0 0 0-2 0h-2l1 3a3 3 0 0 1 2 0l1-3Zm-4 4L8 7a6 6 0 0 0-2 4h3l1-1Z" clip-rule="evenodd"/>
+  </symbol>
+  <symbol id="x">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 6 6 18M6 6l12 12"/>
+  </symbol>
+</svg>
