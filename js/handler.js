@@ -69,7 +69,7 @@ $(function () {
                 $(newMsgBox).find(".username-usrbox").text(data.sender)
 
                 if (data['pfp']) {
-                    $(newMsgBox).find(".profile-picture").css("background-image", `url(${data['pfp']})`)
+                    $(newMsgBox).find(".profile-picture").css("background-image", `url(${data["pfp"]})`)
                 } else {
                     $(newMsgBox).find(".profile-picture").css("background-image", `url(https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg)`)
                 }
@@ -94,16 +94,23 @@ $(function () {
             username = $(".messages-create-username").val()
             profilepictureCDN = $(".messages-create-profilepicture").val()
 
-            $(".messages-footer-user-name").text(username)
-            $(".messages-footer-image").css('background-image', `url(${profilepictureCDN})`)
-            $(".messages-footer-image").css('background-size', "40px 40px")
-            $(".messages-footer-image").css('border-radius', "100%")
-            $(".messages-footer-userpfp").css('background-size', "50px 50px")
 
             if (username.length > 2 && username.length < 20) {
-                $(".create-profile").hide()
-                $(".messages-send-input").prop('disabled', false);
-                joinChatRoom()
+                if (username.endsWith(' ') || username.startsWith(' ')) {
+                    $(".tag-warning").text("* Username cannot start or end with a space");
+                } else {
+                    $(".messages-footer-user-name").text(username)
+                    $(".messages-footer-image").css('background-image', `url(${profilepictureCDN || "https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg"})`)
+                    $(".messages-footer-image").css('background-size', "40px 40px")
+                    $(".messages-footer-image").css('border-radius', "100%")
+                    $(".messages-footer-userpfp").css('background-size', "50px 50px")
+
+
+                    $(".tag-warning").text("*");
+                    $(".create-profile").hide()
+                    $(".messages-send-input").prop('disabled', false);
+                    joinChatRoom()
+                }
             }
         });
     }
