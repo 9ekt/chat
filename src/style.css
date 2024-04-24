@@ -17,6 +17,7 @@
 
 body {
   font-family: "Nunito Sans", "Space Grotesk", sans-serif;
+  overflow: hidden;
 }
 
 svg {
@@ -857,10 +858,20 @@ svg {
 
 .message-box {
   transform: rotate(-180deg);
+  background-repeat: no-repeat;
 }
 
 .message-box:hover, .message-box-template:hover {
   background-color: #2E3035;
+}
+
+.username-messagebox {
+  line-break: anywhere;
+}
+
+.username-gifbox {
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 /* SECTION */
