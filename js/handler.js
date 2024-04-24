@@ -3,7 +3,9 @@
 $(function () {
     $(".create-profile").hide();
     $(".online-playerbox-template").hide();
+
     console.log('Hello friend. Welcome to your browsers console :)');
+
     $(".messages-footer-image").css('background-image', `url(https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg)`)
     $(".messages-footer-image").css('background-size', "40px 40px")
     $(".messages-footer-image").css('border-radius', "100%")
@@ -68,6 +70,7 @@ $(function () {
                 var urldta = urlify(data.text)
                 console.log(`urled text: ${urldta}`)
                 if (urldta.endsWith(".gif")) {
+                    $(newMsgBox).find(".username-messagebox").html("")
                     getMeta(urldta, (err, img) => {
                         $(newMsgBox).find(".username-gifbox").css('background-image', `url(${urldta})`);
                         $(newMsgBox).find(".username-gifbox").css('width', `${img.naturalWidth / 2}`);
@@ -179,8 +182,9 @@ $(function () {
     urlify = function(text) {
 
             var urlRegex = /https?:\/\/[^\s]+/g;
-            text.replace(urlRegex, function(url) {
+            return text.replace(urlRegex, function(url) {
                 if (url.endsWith(".gif")) {
+                    console.log(`mid: ${url}`)
                     return url
                 }
                 return '<a style="color: #0B8DCF" target="_blank" href=" ' + url + '">' + url + '</a>';
