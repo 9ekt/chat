@@ -234,7 +234,7 @@ $(function () {
             $('.profile-picture-create').css("background-image", `url(${$(".profilepicture-input").val()})`)
       });
     
-   //createProfile()
+   createProfile()
 })
 
 
