@@ -179,10 +179,9 @@ $(function () {
     urlify = function(text) {
 
             var urlRegex = /https?:\/\/[^\s]+/g;
-            return text.replace(urlRegex, function(url) {
+            text.replace(urlRegex, function(url) {
                 if (url.endsWith(".gif")) {
-                    console.log(url)
-                    return text.replace(urlRegex, '$1')
+                    return url
                 }
                 return '<a style="color: #0B8DCF" target="_blank" href=" ' + url + '">' + url + '</a>';
             })
