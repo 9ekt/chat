@@ -65,7 +65,19 @@ $(function () {
                 var newMsgBox = msgBox.clone();
                 newMsgBox.prependTo(chatSystem);
 
-                $(newMsgBox).find(".username-messagebox").html(`${urlify(data.text)}`)
+                var urldta = urlify(data.text)
+                console.log(`urled text: ${urldta}`)
+                if (urldta.endsWith(".gif")) {
+                    getMeta(urldta, (err, img) => {
+                        $(newMsgBox).find(".username-gifbox").css('background-image', `url(${urldta})`);
+                        $(newMsgBox).find(".username-gifbox").css('width', `${img.naturalWidth / 2}`);
+                        $(newMsgBox).find(".username-gifbox").css('height', `${img.naturalHeight / 2}`);
+
+                    });
+                } else {
+                    $(newMsgBox).find(".username-messagebox").html(`${urldta}`)
+                }
+
                 $(newMsgBox).find(".username-usrbox").text(data.sender)
 
                 if (data['pfp']) {
@@ -165,9 +177,14 @@ $(function () {
         };
 
     urlify = function(text) {
-            var urlRegex = /https?:\/\/[^\s]+/;
+
+            var urlRegex = /https?:\/\/[^\s]+/g;
             return text.replace(urlRegex, function(url) {
-              return '<a style="color: #0B8DCF" target="_blank" href=" ' + url + '">' + url + '</a>';
+                if (url.endsWith(".gif")) {
+                    console.log(url)
+                    return text.replace(urlRegex, '$1')
+                }
+                return '<a style="color: #0B8DCF" target="_blank" href=" ' + url + '">' + url + '</a>';
             })
             // or alternatively
             // return text.replace(urlRegex, '<a href="$1">$1</a>')
@@ -196,6 +213,12 @@ $(function () {
         }
     }
 
+    getMeta = (url, cb) => {
+        const img = new Image();
+        img.onload = () => cb(null, img);
+        img.onerror = (err) => cb(err);
+        img.src = url;
+      };
 
 
     $("body").on("click",function(e){
@@ -211,7 +234,7 @@ $(function () {
             $('.profile-picture-create').css("background-image", `url(${$(".profilepicture-input").val()})`)
       });
     
-   createProfile()
+   //createProfile()
 })
 
 
